@@ -1,0 +1,143 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.categoriesType {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: aqua;
+  color: black;
+  text-align: center;
+}
+
+.scrollContainer {
+  display: flex;
+  position: relative;
+  width: 70%;
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border: 2px solid wheat;
+}
+
+.fackeScrollContainer {
+  /* background-color: aqua; */
+  height: 10000px;
+}
+
+.gridContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, calc(100% / 4)));
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gridElem {
+  min-width: 300px;
+  min-height: 300px;
+  /* width: calc(100% / 3);
+  aspect-ratio: 1 / 1.3; */
+  box-sizing: border-box;
+  flex-direction: column;
+  border: 1px solid black;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.gridItem {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease;
+}
+
+.gridItem_open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.loadingBlock {
+  margin-top: 10px;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  background-color: #fb0303;
+  width: 100%;
+  margin-bottom: 50px;
+  font-weight: 30px;
+  text-align: center;
+}
+
+.footer {
+  min-height: 100px;
+  text-align: center;
+  background-color: #a19b9b;
+  width: 100%;
+}
